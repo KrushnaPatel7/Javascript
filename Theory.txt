@@ -1,0 +1,50 @@
+1)Execution Context :
+	a)Memory component (Variable Environment): key:value pairs
+	b)Code component (Thread of execution)
+2)JavaScript is synchronous single threaded language that means it can execute only one command at a time.
+
+-----------------------------Hoisting----------------------------------------------------------------------------------------
+
+1)Hoisting in JS is a concept where u can access the function and variable even before u have initialized it.
+2)D/B Undefined and Not Defined :If the variable is no where declared in the code it is not defined and if u r trying to access the variable before its initialization it is called undefined .
+
+3)Whenever JavaScript code is executed a global object is created and global execution context is created.
+
+4)JavaScript Engine creates this global object and this (keyword) is also created which is the global object 
+
+5)Global space is basically any code written outside the functions.
+
+
+----------------------Scope Chain----------------------------------------------------------------------------------------------
+
+1)Scope is basically where i can access a specific variable or function inside the code.
+2)Lexical Environment is created whenever an execution context is created .
+3)Lexical Environment :Local memory + reference to the lexical env of the parent.
+
+-----------------------Let and Const--------------------------------------------------------------------------------------------
+1)Let and Const are hoisted (temporal dead zone),when u try to access variables from tdz it will give us reference error.
+2)Let and const are not on global memory they have a special reserve memory.
+3) Const is even more strict then let.
+4)For let we can initialize a new variable to it but for const we cannot it will give us Type error.
+5)When declaring a const variable we have to initialize it compulsory otherwise it will give syntax error.
+
+--------------------------Errors-------------------------------------------------------------------------------------------------
+1)SyntaxError: eg. the one which we get when const is not declared properly with initialization.
+2)TypeError :eg.For let we can initialize a new variable to it but for const we cannot it will give us Type error.
+3)ReferenceError: eg. trying to access a variable which has never been declared in the code.
+
+--------------------------Block Scope in let and const----------------------------------------------------------------------------
+1)Block : is defined by start and end curly braces,block groups multiple JS Statements.
+2)let and const are block scoped,var is in global scope.
+3)Shadowing is,basically if we declare var a twice we will get the output of second value passed , so second value shadows the first value.
+
+
+---------------------------------Closure----------------------------------------------------------------------------------------------
+1)Function along with it lexical scope is called closure.
+
+-----------------------------------Garbage Collector-----------------------------------------------------------------------------
+1)The garbage collector in JavaScript automatically frees up memory by removing objects or variables that are no longer being used or needed in the program.
+
+--------------------------------------First Class Functions---------------------------------------------------------------------
+1)Anonymous Functions:Function without name is Anonymous functions.
+2)

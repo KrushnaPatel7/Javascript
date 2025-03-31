@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>New Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png"
+    />
+  </head>
+  <body class="body-style">
+    <header id="main-header">
+      <h1>Table Display</h1>
+    </header>
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a href="index.html"
+            ><img
+              src="https://i.pinimg.com/originals/63/d9/a0/63d9a0f0ca26a6a3da699c91132aa03d.jpg"
+              style="width: 20px; height: 20px"
+            />
+            Back</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <h1 class="heading-style">Welcome to the Table Page!</h1>
+    <p class="para-style">Here is a sample table:</p>
+    <dl>
+      <dt style="padding-left: 20px">Table items</dt>
+      <dd style="padding-left: 20px">Contents of table</dd>
+      <ul class="custom-style">
+        <li>Firstname</li>
+        <li>Lastname</li>
+        <li>City</li>
+      </ul>
+    </dl>
+    <table class="table-style">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>City</th>
+      </tr>
+      <tr>
+        <td>Krushna</td>
+        <td>Patel</td>
+        <td>Pune</td>
+      </tr>
+      <tr>
+        <td>Swati</td>
+        <td>Shinde</td>
+        <td>Mumbai</td>
+      </tr>
+      <tr>
+        <td>Raj</td>
+        <td>Arora</td>
+        <td>Delhi</td>
+      </tr>
+    </table>
+    <div class="city-container pune-style">
+      <h2>Pune</h2>
+      <p>
+        Pune is a city in west region and is cultural capital of Maharashtra and
+        is known for its educational institutions and historic sites.
+      </p>
+    </div>
+    <div class="city-container mumbai-style">
+      <h2>Mumbai</h2>
+      <p>
+        Mumbai,is a city in west region also known as Bombay, is the financial
+        capital of India and is famous for its vibrant culture and Bollywood.
+      </p>
+    </div>
+    <div class="city-container delhi-style">
+      <h2>Delhi</h2>
+      <p>
+        Delhi is a city in north region and is capital city of India, known for
+        its rich history, monuments, and bustling markets.
+      </p>
+    </div>
+    <div class="city-dropdown-container">
+      <h3>Select a City</h3>
+      <select id="city-dropdown" onchange="showCityInfo(this)">
+        <option value="">Choose a City</option>
+        <option value="pune">Pune</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="delhi">Delhi</option>
+      </select>
+    </div>
+    <footer id="main-footer">
+      <p>&copy; 2025 My Website. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

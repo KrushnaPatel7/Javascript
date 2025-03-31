@@ -1,0 +1,53 @@
+function deepCopyWithFunctions(obj) {
+  if (typeof obj === 'function') {
+    // If it's a function, return a new function (cloning function)
+    return function (...args) {
+      return obj.apply(this, args);
+    };
+  }
+  
+  if (obj && typeof obj === 'object') {
+    // If it's an object or array, we need to deep copy it
+    const copy = Array.isArray(obj) ? [] : {};  // Create a new object/array
+
+    // Recursively copy each property
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        copy[key] = deepCopyWithFunctions(obj[key]);  // Deep copy each property
+      }
+    }
+
+    return copy;
+  }
+  
+  return obj;  // For primitive types, just return the value
+}
+
+// Example with functions
+const obj1 = {
+  name: "John",
+  age: 25,
+  incrementAge: function() {
+    this.age += 1;
+  },
+  nested: {
+    nestedValue: "Hello",
+    nestedFunction: function() {
+      console.log("Nested function");
+    }
+  }
+};
+
+// Deep copy object, including functions
+const obj2 = deepCopyWithFunctions(obj1);
+
+// Modify the copy
+obj2.name = "Jane";
+obj2.nested.nestedValue = "New value";
+obj2.incrementAge();
+obj2.nested.nestedFunction = function() {
+  console.log("This is a modified nested function");
+};
+
+console.log("Original Object:", obj1);
+console.log("Copied Object:", obj2);
