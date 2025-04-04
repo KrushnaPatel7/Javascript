@@ -17,6 +17,14 @@
   border: 1px solid black;
   cursor: pointer;
 }
+.innerchild-style {
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 2px;
+  background-color: rgb(50, 18, 234);
+  border: 1px solid black;
+  cursor: pointer;
+}
 
 .child-style:hover {
   background-color: rgb(93, 68, 39);
